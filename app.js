@@ -13,5 +13,5 @@ function updateCart() {
     });
     let message = "Hola, quiero comprar: " + cart.join(", ");
     document.getElementById("whatsappLink").href = "https://wa.me/34644938677?text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
 }
-
