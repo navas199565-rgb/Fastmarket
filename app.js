@@ -12,7 +12,7 @@ function updateCart() {
         document.getElementById("cart").appendChild(li);
     });
     let message = "Hola, quiero comprar: " + cart.join(", ");
-    let = "https://wa.me/34644938677?text=" + encodeURIComponent(message);
+    let = "https://wa.me/644938677?text=" + encodeURIComponent(message);
     document.getElementById("whatsappBtn").inclick = () => {
       window.open(url, "_blank");
     };
