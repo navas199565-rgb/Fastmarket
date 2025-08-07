@@ -1,19 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fastmarket</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fasmarket - Tu tienda online</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: #111;
+      color: white;
+      padding: 10px 20px;
+    }
+    header img {
+      height: 50px;
+    }
+    h1 {
+      margin: 0;
+    }
+    .productos {
+      margin: 20px 0;
+    }
+    .producto {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .producto button {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .producto button:hover {
+      background: #218838;
+    }
+    #carrito {
+      background: white;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    #whatsappBtn {
+      margin-top: 15px;
+      background: #25D366;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #whatsappBtn:hover {
+      background: #1ebe5d;
+    }
+  </style>
 </head>
 <body>
-    <h1>Bienvenido a Fastmarket</h1>
-    <p>Tu tienda online de alimentación. Prueba el carrito abajo:</p>
-    <button onclick="addToCart('Manzana')">Agregar Manzana</button>
-    <button onclick="addToCart('Agua')">Agregar Agua</button>
-    <h2>Carrito:</h2>
-    <ul id="cart"></ul>
-    <a id="whatsappLink" href="#" target="_blank">Enviar por WhatsApp</a>
-    <script src="app.js"></script>
+  <header>
+    <img src="logofasmarket.png" alt="Fasmarket Logo">
+    <h1>Fasmarket</h1>
+  </header>
+  <p>Tu tienda online de alimentación. Agrega productos al carrito:</p>
+  <div class="productos">
+    <div class="producto">
+      <strong>Manzana</strong> - 0.50€ 
+      <button onclick="agregarAlCarrito(1)">Agregar</button>
+    </div>
+    <div class="producto">
+      <strong>Agua</strong> - 1.00€ 
+      <button onclick="agregarAlCarrito(2)">Agregar</button>
+    </div>
+    <div class="producto">
+      <strong>Chocolate</strong> - 1.50€ 
+      <button onclick="agregarAlCarrito(3)">Agregar</button>
+    </div>
+    <div class="producto">
+      <strong>Pan</strong> - 0.80€ 
+      <button onclick="agregarAlCarrito(4)">Agregar</button>
+    </div>
+  </div>
+  <h2>Carrito:</h2>
+  <div id="carrito">
+    <p>El carrito está vacío.</p>
+  </div>
+  <button id="whatsappBtn" onclick="enviarPorWhatsApp()">Enviar por WhatsApp</button>
+  <script src="app.js"></script>
 </body>
 </html>
